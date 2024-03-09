@@ -1,5 +1,7 @@
 <template>
   <div class="app">
-    App
+    <UiLangSwitcher />
+
+    {{ $t('app') }}
   </div>
 </template>
