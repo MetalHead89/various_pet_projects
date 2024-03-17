@@ -5972,6 +5972,13 @@ util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
 
+v-wave@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/v-wave/-/v-wave-2.0.0.tgz#884f8ad1aa1f71a46cbe838057309acfe357e6df"
+  integrity sha512-AFr1kUvSDyInqUHqR+cVtBKAr6s1w9X13abxHUUtCHvhpLYZhnjyDynJ1HqLH6sNwXxJqvGx/dh2Z2tkgu2I5w==
+  dependencies:
+    "@nuxt/kit" "^3.8.2"
+
 validate-npm-package-license@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz#fc91f6b9c7ba15c857f4cb2c5defeec39d4f410a"

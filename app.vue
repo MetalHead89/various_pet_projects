@@ -1,7 +1,9 @@
 <template>
   <div class="app">
-    <UiLangSwitcher />
+    <!-- <UiLangSwitcher /> -->
 
-    {{ $t('app') }}
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>

@@ -13,12 +13,16 @@ export default defineNuxtConfig({
   components: [
     { path: '~/components/ui', prefix: 'Ui' },
     { path: '~/components/ui/selects', prefix: 'Ui' },
+    { path: '~/components/ui/buttons', prefix: 'Ui' },
+    { path: '~/components/ui/cards', prefix: 'Ui' },
+    { path: '~/components/ui/inputs', prefix: 'Ui' },
     '~/components'
   ],
 
   modules: [
     '@nuxtjs/i18n',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    'v-wave/nuxt'
   ],
 
   i18n: {
