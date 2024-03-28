@@ -1,3 +1,5 @@
+import { DEFAULT_ROUTE_PATH } from './config/constants'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -8,6 +10,10 @@ export default defineNuxtConfig({
         lang: 'ru'
       }
     }
+  },
+
+  routeRules: {
+    '/': { redirect: DEFAULT_ROUTE_PATH }
   },
 
   components: [

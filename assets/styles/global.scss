@@ -1,20 +1,26 @@
 @import 'normalize.css';
 @import './fonts.scss';
+@import './icons_font.scss';
 
 html {
   font-family: $base-font;
   font-size: $font-size;
-  color: $base-text-color;
+  color: $text-color;
 }
 
 html,
 body,
 .__nuxt,
-.app,
+.app {
+  height: 100vh;
+  height: 100svh;
+}
+
 .empty-layout,
 .default-layout {
-  min-height: 100vh;
-  min-height: 100svh;
+  height: 100vh;
+  height: 100svh;
+  overflow-y: auto;
 }
 
 h1 {

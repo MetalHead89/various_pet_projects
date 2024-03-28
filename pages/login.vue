@@ -19,6 +19,8 @@
 </template>
 
 <script setup lang="ts">
+import { DEFAULT_ROUTE_PATH } from '@/config/constants'
+
 definePageMeta({
   layout: 'empty'
 })
@@ -37,7 +39,7 @@ onMounted(() => {
 
 const handleSuccessAuth = () => {
   isAuthenticated.value = true
-  timer.value = setTimeout(() => { router.push({ name: 'index' }) }, 4000)
+  timer.value = setTimeout(() => { router.push(DEFAULT_ROUTE_PATH) }, 4000)
 }
 </script>
 
@@ -81,16 +83,7 @@ const handleSuccessAuth = () => {
       border: 2px solid #ffffff68;
       box-shadow: 0, 0, 20px 10px #00000026;
       transform: translate(-50%, -50%);
-  }
-    // color: #ffffff;
-    // position: fixed;
-    // left: 50%;
-    // top: 50%;
-    // transform: translate(-50%, -50%);
-    // font-size: 1.5rem;
-    // font-weight: 700;
-    // text-align: center;
-    // padding: 20px;
+    }
   }
 
   .moving-enter-active {
