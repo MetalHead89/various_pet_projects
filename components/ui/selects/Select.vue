@@ -27,15 +27,15 @@ export interface Props {
   showBy?: string
 }
 
-const emit = defineEmits([
-  'update:model-value'
-])
-
 const props = withDefaults(defineProps<Props>(), {
   isMultiple: false,
   trackBy: 'id',
   showBy: 'value'
 })
+
+const emit = defineEmits([
+  'update:model-value'
+])
 
 const selected = computed(() => {
   if (props.isMultiple) {

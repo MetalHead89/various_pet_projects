@@ -29,7 +29,7 @@ const handleTextInput = (event: Event) => {
 <style lang="scss" scoped>
 .input {
   border: none;
-  border-radius: $base-radius;
+  border-radius: $control-radius;
   padding: 10px 20px;
   width: 100%;
   box-sizing: border-box;

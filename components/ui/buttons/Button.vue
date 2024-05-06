@@ -47,7 +47,7 @@ const classes = computed(() => {
   display: flex;
   justify-content: center;
   background: $primary;
-  border-radius: $base-radius;
+  border-radius: $control-radius;
   padding: 10px 20px;
   border: none;
   color: #ffffff;

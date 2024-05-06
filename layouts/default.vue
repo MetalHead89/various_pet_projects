@@ -8,6 +8,11 @@
     >
       <slot />
     </main>
+
+    <UiLoadingOverlay
+      :active="pageLoadingOverlay.isLoading"
+      :z-index="50"
+    />
   </div>
 </template>
 
@@ -17,6 +22,7 @@ const headerStore = useHeaderStore()
 const mainRef = ref<HTMLElement | null>(null)
 const screen = useScreen()
 const sidebarStore = useSidebarStore()
+const pageLoadingOverlay = usePageLoadingOverlay()
 
 const BASE_MAIN_CLASS = 'main'
 

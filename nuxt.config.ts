@@ -55,6 +55,12 @@ export default defineNuxtConfig({
     }
   },
 
+  runtimeConfig: {
+    public: {
+      openExchangeRatesApiKey: process.env.OPEN_EXCHANGE_RATES_API_KEY
+    }
+  },
+
   css: ['@/assets/styles/global.scss'],
 
   vite: {
@@ -62,8 +68,9 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         scss: {
           additionalData:
+            '@use "@/assets/styles/mixins.scss" as *;' +
             '@use "@/assets/styles/functions.scss" as *;' +
-              '@use "@/assets/styles/variables.scss" as *;'
+            '@use "@/assets/styles/variables.scss" as *;'
         }
       }
     }
