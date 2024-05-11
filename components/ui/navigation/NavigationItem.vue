@@ -47,7 +47,7 @@ const classes = computed(() => [
   gap: 20px;
   margin: 0 $sidebar-side-padding;
   transition: all 0.3s;
-  border-radius: 10px;
+  border-radius: $base-control-radius;
   cursor: pointer;
   text-decoration: none;
   color: $text-color;

@@ -9,7 +9,17 @@
     class="select"
     :multiple="isMultiple"
     @update:model-value="handleSelectInput"
-  />
+  >
+    <template
+      v-for="slotName in Object.keys($slots)"
+      #[slotName]="slotScope"
+    >
+      <slot
+        :name="slotName"
+        v-bind="slotScope"
+      />
+    </template>
+  </VueMultiselect>
 </template>
 
 <script lang="ts" setup>
@@ -55,4 +65,50 @@ const handleSelectInput = (value: TAnyObject | TAnyObject[]) => {
 }
 </script>
 
-<style src="vue-multiselect/dist/vue-multiselect.css"></style>
+<style lang="scss">
+@import 'vue-multiselect/dist/vue-multiselect.css';
+
+.select {
+  .multiselect {
+    &__content-wrapper {
+      display: block !important;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s ease;
+      margin: 50px 0;
+      border: 1px solid $field-border-color;
+      border-radius: $base-control-radius;
+    }
+
+    &__tags {
+      border: 1px solid $field-border-color;
+      border-radius: $base-control-radius;
+    }
+
+    &__single {
+      cursor: pointer;
+    }
+
+    &__option--selected {
+      &.multiselect__option--highlight {
+        background: #f3f3f3;
+        color: #35495e;
+      }
+    }
+  }
+
+  &.multiselect--active {
+    .multiselect {
+      &__content-wrapper {
+        visibility: visible;
+        opacity: 1;
+        margin: 5px 0;
+      }
+
+      &__tags {
+        border-radius: $base-control-radius;
+      }
+    }
+  }
+}
+</style>

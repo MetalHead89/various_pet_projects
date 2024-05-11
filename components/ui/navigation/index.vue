@@ -16,25 +16,44 @@
 
 <script lang="ts" setup>
 import NavigationItem from './NavigationItem.vue'
-import type { TNavigationItem } from './NavigationItem.vue'
 
 const { t } = useI18n()
 
-const navigation: TNavigationItem[][] = [
-  [
-    {
-      icon: 'ic-line-chart',
-      label: t('sidebar.top_section.navigation.dashboard'),
-      link: { name: 'dashboard' }
-    }
-  ],
-  [
-    {
-      icon: 'ic-logout',
-      label: t('sidebar.top_section.navigation.logout'),
-      component: 'button',
-      action: () => { console.dir('!!!!') }
-    }
+const navigation = computed(() => {
+  return [
+    [
+      {
+        icon: 'ic-line-chart',
+        label: t('sidebar.top_section.navigation.dashboard'),
+        link: { name: 'dashboard' }
+      }
+    ],
+    [
+      {
+        icon: 'ic-logout',
+        label: t('sidebar.top_section.navigation.logout'),
+        component: 'button',
+        action: () => { console.dir('!!!!') }
+      }
+    ]
   ]
-]
+})
+
+// const navigation: TNavigationItem[][] = [
+//   [
+//     {
+//       icon: 'ic-line-chart',
+//       label: t('sidebar.top_section.navigation.dashboard'),
+//       link: { name: 'dashboard' }
+//     }
+//   ],
+//   [
+//     {
+//       icon: 'ic-logout',
+//       label: t('sidebar.top_section.navigation.logout'),
+//       component: 'button',
+//       action: () => { console.dir('!!!!') }
+//     }
+//   ]
+// ]
 </script>

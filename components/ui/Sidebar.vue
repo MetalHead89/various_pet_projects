@@ -6,7 +6,10 @@
     >
       <i class="ic-web-application logo" />
 
-      <span class="logo-text">
+      <span
+        v-if="sidebarStore.state !== SIDEBAR_STATE.minimized"
+        class="logo-text"
+      >
         {{ $t('sidebar.top_section.logo_text') }}
       </span>
 
@@ -18,6 +21,10 @@
     </div>
 
     <UiNavigation />
+
+    <div class="lang-switcher-wrapper">
+      <UiLangSwitcher />
+    </div>
 
     <!-- <button @click="handleLogOutClick">
       {{ $t('sidebar.top_section.logo_text') }}
@@ -74,7 +81,7 @@ const handleCloseClick = () => {
 <style lang="scss">
 .sidebar {
   position: fixed;
-  overflow: hidden;
+  // overflow: hidden;
   top: 0;
   bottom: 0;
   left: 0;
@@ -83,9 +90,12 @@ const handleCloseClick = () => {
   z-index: 102;
   transform: translateX(-100%);
   transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
 
   .top-section {
-    padding: 10px $sidebar-side-padding;
+    padding: 0 $sidebar-side-padding 10px $sidebar-side-padding;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -123,6 +133,10 @@ const handleCloseClick = () => {
 
   &_is-opened {
     transform: translateX(0);
+  }
+
+  .lang-switcher-wrapper {
+    margin: auto $sidebar-side-padding 0 $sidebar-side-padding;
   }
 }
 
