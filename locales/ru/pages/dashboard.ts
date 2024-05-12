@@ -5,5 +5,9 @@ export default {
     years_sum: 'Сумма по годам',
     months_sum: 'Сумма по месяцам за последний год',
     year_data: 'Данные за {year} год'
+  },
+
+  breadcrumbs: {
+    page: 'Дашборд'
   }
 }

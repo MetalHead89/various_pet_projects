@@ -5,5 +5,9 @@ export default {
     years_sum: 'Amount by year',
     months_sum: 'Amount by month for the last year',
     year_data: 'Data for {year} year'
+  },
+
+  breadcrumbs: {
+    page: 'Dashboard'
   }
 }

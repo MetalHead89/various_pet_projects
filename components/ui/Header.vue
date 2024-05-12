@@ -4,6 +4,7 @@
     :class="classes"
   >
     <UiBurger />
+    <UiBreadcrumbs />
   </header>
 </template>
 
@@ -59,7 +60,6 @@ onDeactivated(() => {
   grid-column: 1 / span 2;
   padding: 20px $base-content-padding;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background: rgba($main-bg-color, 0.7);
   position: fixed;
@@ -69,6 +69,7 @@ onDeactivated(() => {
   backdrop-filter: blur(7px);
   z-index: 100;
   transition: margin 0.3s;
+  gap: 30px;
 
   &_is-long {
     margin-left: $sidebar-minimized-width;

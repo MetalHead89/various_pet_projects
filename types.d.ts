@@ -21,6 +21,11 @@ type TDashboardData = Array<{
 
 type TDashboardChartData = { [key: number]: number[] }
 
+type TBreadcrumbs = {
+  label: string,
+  routeName?: string
+}[]
+
 interface IFetchService {
   get: (path: TApiParams, params?: TAnyObject) => any,
   post: (path: TApiParams, body?: TAnyObject) => any

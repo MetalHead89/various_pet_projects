@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="navigation">
     <div
       v-for="(group, groupIndex) in navigation"
       :key="groupIndex"
@@ -38,22 +38,12 @@ const navigation = computed(() => {
     ]
   ]
 })
-
-// const navigation: TNavigationItem[][] = [
-//   [
-//     {
-//       icon: 'ic-line-chart',
-//       label: t('sidebar.top_section.navigation.dashboard'),
-//       link: { name: 'dashboard' }
-//     }
-//   ],
-//   [
-//     {
-//       icon: 'ic-logout',
-//       label: t('sidebar.top_section.navigation.logout'),
-//       component: 'button',
-//       action: () => { console.dir('!!!!') }
-//     }
-//   ]
-// ]
 </script>
+
+<style lang="scss" scoped>
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+</style>

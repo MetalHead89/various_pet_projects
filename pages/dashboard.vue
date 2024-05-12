@@ -29,10 +29,16 @@ import FeatureCurrentMonthDataCard from '@/components/features/dashboard/Current
 import FeatureDonuts from '@/components/features/dashboard/Donuts.vue'
 
 const { $api } = useNuxtApp()
+const { buildBreadcrumbs } = useBreadcrumbsStore()
+const { t } = useI18n()
 
 const dashboardData = ref<TDashboardData>([])
 const allYearsData = ref<TDashboardChartData>([])
 const currentMonthData = ref<TDashboardChartData>([])
+
+buildBreadcrumbs([
+  { label: t('dashboard_page.breadcrumbs.page') }
+])
 
 const { setIsLoading } = usePageLoadingOverlay()
 
